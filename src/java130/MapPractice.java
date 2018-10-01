@@ -14,11 +14,18 @@ import java.util.*;
  */
 public class MapPractice {
     
-    public static void main(){
+    /**
+     *
+     * @param args
+     */
+    public static void main(String args[]){
         
         Map<String, String> expedMap = new HashMap<>();
     
         Scanner in = new Scanner(System.in);
+        
+        String tmpK;  //temp String var for keys
+        String tmpV;  //temp String var for values
     
         boolean done = false;
     
@@ -31,19 +38,40 @@ public class MapPractice {
                 System.out.println("Options:");
                 System.out.println("(C)reate a new pair");
                 System.out.println("(P)rint a value");
-                System.out.println("(L)ock the map\n");
-                System.out.println("(D)one");
+                System.out.println("(L)ock the map");
+                System.out.println("(D)one\n");
                 switch(in.next().toLowerCase().charAt(0)){
-                    case 'c' : createPair();    //TODO: implement this
+                    case 'c' :
+                        //Get pair from the console
+                        System.out.print("\nEnter key: ");
+                        tmpK = in.next();
+                        System.out.print("\nEnter value: ");
+                        tmpV = in.next();
+                        
+                        //add pair to map
+                        expedMap.put(tmpK, tmpV);
+                        System.out.println("Pair added.");
                         break;
-                    case 'p' : printValue();    //TODO: implement this
+                        
+                    case 'p' : 
+                        //get key to search
+                        System.out.print("Enter Key: ");
+                        tmpK = in.next();
+                        tmpV = expedMap.get(tmpK);
+                        System.out.println("That Key's value is: " + tmpV);  //print key's value
                         break;
-                    case 'l' : expedMap.put("locked", "true");
+                        
+                    case 'l' : 
+                        //lock the map
+                        expedMap.put("locked", "true");
                         System.out.println("Map is now locked\n");
                         break;
-                    case 'd' : done = true;
+                        
+                    case 'd' : 
+                        done = true;
                         break;
                 }
+                System.out.println("\n");
             }   
         }
         //System.out.println("");
