@@ -9,7 +9,7 @@ import java.util.*;
 
 
 /**
- *
+ * This class is used to implement a hash map
  * @author noah.baertsch
  */
 public class MapPractice {
