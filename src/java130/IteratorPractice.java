@@ -17,9 +17,18 @@ public class IteratorPractice {
     
     public static void main(String args[]){
         
+        ExpeditionMap EMap = new ExpeditionMap();
+        
+        List<String> list;
+        list = printMap(EMap.get());
+        
+        for(String s : list){
+            System.out.println(s);
+        }
+        
     }
     
-    public List<String> printMap(Map<String, String> map){
+    public static List<String> printMap(Map<String, String> map){
         
         Iterator<String> iter = map.values().iterator();
         List<String> list = new ArrayList();
@@ -28,7 +37,7 @@ public class IteratorPractice {
             list.add(iter.next());
         }
         
-        return new List<String>();
+        return list;
     }
     
 }
