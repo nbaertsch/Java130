@@ -3,24 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package java130;
+package MyGUI;
 
 //imports
 import javax.swing.*;
-
 
 /**
  *
  * @author noah.baertsch
  */
-public class GuiStuff {
+public class MyFrame extends JFrame{
     
-    public static void main (String args[]){
-        
-        JFrame frame = new JFrame("Demo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        
+    public MyFrame(){
+        this.setResizable(false);
+        this.setVisible(true);
     }
     
 }
