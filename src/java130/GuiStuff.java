@@ -17,6 +17,10 @@ public class GuiStuff {
     
     public static void main (String args[]){
         
+        JFrame frame = new JFrame("Demo");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        
     }
     
 }
