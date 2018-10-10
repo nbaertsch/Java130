@@ -5,10 +5,18 @@
  */
 package MyGUI;
 
+//imports
+import javax.swing.*;
+
 /**
  *
  * @author noah.baertsch
  */
 public class Test {
+    
+    public static void main(String args[]){
+        JFrame frame = new MyFrame();
+        
+    }
     
 }

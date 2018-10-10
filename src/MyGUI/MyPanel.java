@@ -10,8 +10,18 @@ import javax.swing.*;
 
 /**
  *
+ * 
  * @author noah.baertsch
  */
 public class MyPanel extends JPanel{
+    
+    //Mouse Listener
+    public MouseListener = new MouseListener();
+    
+    //Mouse Motion Listener
+    
+    public MyPanel(){
+        this.addMouseMotionListener(new MouseListener());
+    }
     
 }
