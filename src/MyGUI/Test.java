@@ -5,18 +5,26 @@
  */
 package MyGUI;
 
-//imports
-import javax.swing.*;
+import javax.swing.SwingUtilities;
 
 /**
- *
- * @author noah.baertsch
+ *Test the Window class
+ * @author Noah Baertsch
  */
 public class Test {
     
-    public static void main(String args[]){
-        JFrame frame = new MyFrame();
-        
+    public static void main(String[] args){
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+            createAndShowWindow(); 
+            }
+        });
+
+    }
+    
+    private static void createAndShowWindow(){
+        Window win = new Window();
+        //win.;
     }
     
 }
