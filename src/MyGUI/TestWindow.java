@@ -9,14 +9,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java130.Java130;
 import javax.swing.*;
 
 
 /**
  *
- * @author NOah
+ * @author Noah
  */
-public class Window extends JFrame {
+public class TestWindow extends JFrame {
     
     private JPanel panel;
     
@@ -24,7 +25,7 @@ public class Window extends JFrame {
     
     private JButton b1, b2, b3;
    
-    public Window(){
+    public TestWindow(){
         super();
         this.panel = new JPanel();
         this.listener = new Listener();
@@ -37,17 +38,19 @@ public class Window extends JFrame {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-                if(e.getActionCommand().equalsIgnoreCase("blue")){
-                    Window.this.panel.setBackground(Color.BLUE);
-                    Window.this.repaint();
+                if(e.getActionCommand().equalsIgnoreCase("testOne")){
+                    TestWindow.this.panel.setBackground(Color.BLUE);
+                    TestWindow.this.repaint();
+                   Java130.main();
+                    TestWindow.this.dispose();
                     
-                }else if(e.getActionCommand().equalsIgnoreCase("red")){
-                    Window.this.panel.setBackground(Color.RED);
-                    Window.this.repaint();
+                }else if(e.getActionCommand().equalsIgnoreCase("testTwo")){
+                    TestWindow.this.panel.setBackground(Color.RED);
+                    TestWindow.this.repaint();
                     
-                }else if(e.getActionCommand().equalsIgnoreCase("green")){
-                    Window.this.panel.setBackground(Color.GREEN);
-                    Window.this.repaint();
+                }else if(e.getActionCommand().equalsIgnoreCase("testThree")){
+                    TestWindow.this.panel.setBackground(Color.GREEN);
+                    TestWindow.this.repaint();
                     
                 }else {
                     throw new UnsupportedOperationException("Not supported yet.");
@@ -69,22 +72,22 @@ public class Window extends JFrame {
         //build listener
         this.listener = new Listener();
         
-        //build blue button
-        b1 = new JButton("Blue");
+        //build buttonOne
+        b1 = new JButton("Test One");
         b1.setMnemonic(KeyEvent.VK_B);
-        b1.setActionCommand("blue");
+        b1.setActionCommand("testOne");
         b1.addActionListener(this.listener);
         
-        //build red button
+        //build buttonTwo
         b2 = new JButton("Red");
         b2.setMnemonic(KeyEvent.VK_R);
-        b2.setActionCommand("red");
+        b2.setActionCommand("testTwo");
         b2.addActionListener(this.listener);
         
-        //build green button
+        //build buttonThree
         b3 = new JButton("Green");
         b3.setMnemonic(KeyEvent.VK_G);
-        b3.setActionCommand("Green");
+        b3.setActionCommand("testThree");
         b3.addActionListener(this.listener);
         
         //build clear  button

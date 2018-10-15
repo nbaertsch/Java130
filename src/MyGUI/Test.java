@@ -8,7 +8,7 @@ package MyGUI;
 import javax.swing.SwingUtilities;
 
 /**
- *Test the Window class
+ *Test the TestWindow class
  * @author Noah Baertsch
  */
 public class Test {
@@ -23,7 +23,7 @@ public class Test {
     }
     
     private static void buildWindow(){
-        Window win = new Window();
+        TestWindow win = new TestWindow();
         win.init();
     }
     
