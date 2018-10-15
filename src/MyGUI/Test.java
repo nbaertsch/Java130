@@ -16,15 +16,15 @@ public class Test {
     public static void main(String[] args){
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-            createAndShowWindow(); 
+            buildWindow(); 
             }
         });
 
     }
     
-    private static void createAndShowWindow(){
+    private static void buildWindow(){
         Window win = new Window();
-        //win.;
+        win.init();
     }
     
 }
