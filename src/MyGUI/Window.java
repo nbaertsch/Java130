@@ -21,6 +21,8 @@ public class Window extends JFrame {
     private JPanel panel;
     
     private ActionListener listener;
+    
+    private JButton b1, b2, b3;
    
     public Window(){
         super();
@@ -31,20 +33,21 @@ public class Window extends JFrame {
     /**
      * private ActionListener implementation
      */
-    private class Listener implements ActionListener(){
-        
-        JButton b1, b2, b3;
+    private class Listener implements ActionListener{
         
         @Override
         public void actionPerformed(ActionEvent e) {
                 if(e.getActionCommand().equalsIgnoreCase("blue")){
-                    //do blue stuff
+                    Window.this.panel.setBackground(Color.BLUE);
+                    Window.this.repaint();
                     
                 }else if(e.getActionCommand().equalsIgnoreCase("red")){
-                    //do red stuff
+                    Window.this.panel.setBackground(Color.RED);
+                    Window.this.repaint();
                     
                 }else if(e.getActionCommand().equalsIgnoreCase("green")){
-                    //do green stuff
+                    Window.this.panel.setBackground(Color.GREEN);
+                    Window.this.repaint();
                     
                 }else {
                     throw new UnsupportedOperationException("Not supported yet.");
@@ -67,30 +70,37 @@ public class Window extends JFrame {
         this.listener = new Listener();
         
         //build blue button
-        JButton b1 = new JButton();
-        this.listener.b1.setName("Blue");
+        b1 = new JButton("Blue");
         b1.setMnemonic(KeyEvent.VK_B);
         b1.setActionCommand("blue");
         b1.addActionListener(this.listener);
         
         //build red button
-        JButton b2 = new JButton("Red");
+        b2 = new JButton("Red");
         b2.setMnemonic(KeyEvent.VK_R);
         b2.setActionCommand("red");
         b2.addActionListener(this.listener);
         
         //build green button
-        JButton b3 = new JButton("Green");
+        b3 = new JButton("Green");
         b3.setMnemonic(KeyEvent.VK_G);
         b3.setActionCommand("Green");
-        b2.addActionListener(this.listener);
+        b3.addActionListener(this.listener);
         
         //build clear  button
+        //maybe..?
         
         //add  buttons to panel
         this.panel.add(b1);
-        this,panel.add(b2);
+        this.panel.add(b2);
         this.panel.add(b3);
+        
+        //Frame stuff
+        this.setVisible(true);
+        this.panel.repaint();
+        this.setSize(400,300);
+        this.setResizable(false);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
     
 }
