@@ -7,6 +7,8 @@ package java130;
 
 import java.net.*;
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Learning about Sockets and general networking stuff on my own time.
@@ -16,11 +18,23 @@ import java.io.*;
  */
 public class SocketPractice {
     
-    public static void main(){
-        Socket sock = new Socket();
-        sock.
-        SocketAdress server = new SocketAdress();
-        sock.connect(endpoint);
-    }
+    //technology rediscovery = 104.236.104.185
     
+    static final int httpPort = 80;
+    
+    public static void main(String[] args){
+        Socket sock = new Socket();
+        InetSocketAddress server = null;
+        try {
+            server = new InetSocketAddress(InetAddress.getByName("technologyrediscovery.net"), 80);
+            sock.connect(server);
+        } catch (UnknownHostException ex) {
+            System.out.println(ex.getLocalizedMessage());
+        } catch (IOException ex) {
+            System.out.println(ex.getLocalizedMessage());
+        }
+        System.out.println(server.getAddress().toString());
+        
+        System.out.println("Socket is connected: " + sock.isConnected());
+    }
 }
