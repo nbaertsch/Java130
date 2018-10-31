@@ -9,7 +9,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *Test the TestWindow class
- * @author Noah Baertsch
+ * @author Noah Baertsch-
  */
 public class Test {
     
