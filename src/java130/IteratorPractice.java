@@ -15,6 +15,10 @@ import java.util.*;
  */
 public class IteratorPractice {
     
+    /**
+     *
+     * @param args
+     */
     public static void main(String args[]){
         
         ExpeditionMap EMap = new ExpeditionMap();
@@ -28,6 +32,11 @@ public class IteratorPractice {
         
     }
     
+    /**
+     *
+     * @param map
+     * @return
+     */
     public static List<String> printMap(Map<String, String> map){
         
         Iterator<String> iter = map.values().iterator();

@@ -12,7 +12,6 @@ import java.awt.event.KeyEvent;
 import java130.Java130;
 import javax.swing.*;
 
-
 /**
  *
  * @author Noah
@@ -25,11 +24,14 @@ public class TestWindow extends JFrame {
     
     private JButton b1, b2, b3;
    
+    /**
+     *
+     */
     public TestWindow(){
         super();
         this.panel = new JPanel();
         this.listener = new Listener();
-        this.setSize(400, 300);
+        this.setSize(300, 400);
     }
     
     /**

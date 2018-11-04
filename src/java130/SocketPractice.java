@@ -22,6 +22,10 @@ public class SocketPractice {
     
     static final int httpPort = 80;
     
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args){
         Socket sock = new Socket();
         InetSocketAddress server = null;

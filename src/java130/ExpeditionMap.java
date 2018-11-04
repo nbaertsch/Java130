@@ -16,6 +16,9 @@ public class ExpeditionMap {
     
     private Map<String, String> map = new HashMap();
     
+    /**
+     *
+     */
     public ExpeditionMap(){
         map.put("Dog","Cat");
         map.put("Red", "Blue");
@@ -30,10 +33,18 @@ public class ExpeditionMap {
         map.put("Last", "This");
     }
     
+    /**
+     *
+     * @return
+     */
     public Map get(){
         return this.map;
     }
     
+    /**
+     *
+     * @param map
+     */
     protected void set(Map<String, String> map){
         //I'm not implementing this just use the constructor values
     }
