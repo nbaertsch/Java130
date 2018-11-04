@@ -29,6 +29,7 @@ public class TestWindow extends JFrame {
         super();
         this.panel = new JPanel();
         this.listener = new Listener();
+        this.setSize(400, 300);
     }
     
     /**
@@ -41,7 +42,7 @@ public class TestWindow extends JFrame {
                 if(e.getActionCommand().equalsIgnoreCase("testOne")){
                     TestWindow.this.panel.setBackground(Color.BLUE);
                     TestWindow.this.repaint();
-                   Java130.main();
+                    Java130.main();
                     TestWindow.this.dispose();
                     
                 }else if(e.getActionCommand().equalsIgnoreCase("testTwo")){
@@ -101,7 +102,7 @@ public class TestWindow extends JFrame {
         //Frame stuff
         this.setVisible(true);
         this.panel.repaint();
-        this.setSize(400,300);
+        this.setSize(400, 300);
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
